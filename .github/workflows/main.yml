@@ -19,6 +19,8 @@ jobs:
           haxelib --quiet install openfl
           haxelib --quiet install lime
           haxelib --quiet install extension-networking
+          haxelib --quiet install extension-networking
+          haxelib --quiet install hxcpp
 
       - name: Run
         run: haxelib run openfl build linux
