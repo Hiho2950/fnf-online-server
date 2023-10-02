@@ -10,11 +10,19 @@ import openfl.display.Sprite;
 import openfl.Lib;
 import openfl.events.MouseEvent;
 
+import openfl.display.Sprite;
+import openfl.Lib;
+import openfl.events.Event;
+
 class Main extends Sprite {
   public var connectedDevices:Int = 0;
+  static function main(): Void {
+    new Main();
+  }
   public function new() {
     super();
       runServer();
+    Lib.current.stage.addEventListener(Event.ENTER_FRAME, update);
   }
 
   private function runServer() {
@@ -30,5 +38,8 @@ class Main extends Sprite {
       }
     }
     server.start();
+  }
+  public function update(event: Event) {
+    // Update game logic here
   }
 }
