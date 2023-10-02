@@ -32,11 +32,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+
+    - name: Run container
+      run: docker-compose up -d
     
     - uses: luisboto/ngrok-tunnel-action@v0.1.7.2
       with:
-        timeout: 5h
         port: 8888
         ngrok_authtoken: ${{ secrets.NGROK_AUTHTOKEN }}
         tunnel_type: tcp
-        save_url_to_filename: tunnelURL.md
