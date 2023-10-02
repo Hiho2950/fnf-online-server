@@ -21,7 +21,7 @@ jobs:
           haxelib --quiet install extension-networking
 
       - name: Run
-        run: haxelib run lime run linux -final
+        run: haxelib run openfl run linux -final
 
   deploy:
     name: Docker container with Ngrok tunnel
