@@ -13,6 +13,7 @@ import openfl.events.MouseEvent;
 import openfl.display.Sprite;
 import openfl.Lib;
 import openfl.events.Event;
+import openfl.events.UncaughtErrorEvent;
 
 class Main extends Sprite {
   public var connectedDevices:Int = 0;
@@ -23,6 +24,7 @@ class Main extends Sprite {
     super();
       runServer();
     Lib.current.stage.addEventListener(Event.ENTER_FRAME, update);
+    Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
   }
 
   private function runServer() {
@@ -41,5 +43,9 @@ class Main extends Sprite {
   }
   public function update(event: Event) {
     // Update game logic here
+  }
+  function onCrash(e:UncaughtErrorEvent):Void
+	{
+    Sys.println(e.error);
   }
 }
