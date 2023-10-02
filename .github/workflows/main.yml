@@ -17,6 +17,7 @@ jobs:
       - name: Installing Libraries
         run: |
           haxelib --quiet install openfl
+          haxelib --quiet install lime
           haxelib --quiet install extension-networking
 
       - name: Formatting
@@ -33,7 +34,7 @@ jobs:
     - name: Run container
       run: docker-compose up -d 
     
-    - uses: luisboto/ngrok-tunnel-action@<VERSION>
+    - uses: luisboto/ngrok-tunnel-action@v0.1.7.2
       with:
         timeout: 8h
         port: 8888
