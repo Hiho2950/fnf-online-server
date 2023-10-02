@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
   <!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-  <meta title="basicserver" package="com.fnfUnknowEngine.server" version="1.0.0" company="" />
+  <meta title="basicserver" package="com.FNFUnknowEngine.server" version="1.0.0" company="" />
 
   <!-- output -->
   <app main="Main" file="basic" path="bin" />
