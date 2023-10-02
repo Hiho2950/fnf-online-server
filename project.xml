@@ -14,6 +14,8 @@
 
   <haxelib name="openfl" />
   <haxelib name="extension-networking" />
+  <haxelib name="lime" />
+  <haxelib name="hxcpp" />
 
   <!-- Show networking logs -->
   <haxedef name="network_logging" />
