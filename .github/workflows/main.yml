@@ -35,7 +35,7 @@ jobs:
     
     - uses: luisboto/ngrok-tunnel-action@v0.1.7.2
       with:
-        timeout: 8h
+        timeout: 5h
         port: 8888
         ngrok_authtoken: ${{ secrets.NGROK_AUTHTOKEN }}
         tunnel_type: tcp
