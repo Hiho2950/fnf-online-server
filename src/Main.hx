@@ -38,7 +38,7 @@ class Main extends Sprite {
         connectedDevices += 1;
         server.send({verb: "connectStatus", connctedClients: connectedDevices});
       }
-    }
+    });
     server.start();
   }
   public function update(event: Event) {
