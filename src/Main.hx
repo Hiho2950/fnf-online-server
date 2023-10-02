@@ -36,7 +36,7 @@ class Main extends Sprite {
       }
       if (e.data.verb == "connected") {
         connectedDevices += 1;
-        server.send(verb: "connectStatus", connctedClients: connectedDevices});
+        server.send({verb: "connectStatus", connctedClients: connectedDevices});
       }
     }
     server.start();
